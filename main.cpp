@@ -2,12 +2,13 @@
 
 using namespace std;
 void BubbleSort(int A[100], int n);
+void printArray(int A[100], int n);
 
 int main()
 {
-    int[10] A = [9,2,7,4,8];
-    A = BubbleSort(A);
-    cout << A;
+    int A[10] = {9,2,7,4,8};
+    BubbleSort(A, 5);
+    printArray(A, 5);
     return 0;
 }
 
@@ -20,5 +21,11 @@ void BubbleSort(int A[100], int n){
                 A[j-1] = temp;
             }
         }
+    }
+}
+
+void printArray(int A[100], int n){
+    for(int i=0; i < n; i++){
+        cout << A[i] << " ";
     }
 }
